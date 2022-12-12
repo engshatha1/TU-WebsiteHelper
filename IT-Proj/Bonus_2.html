@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+
+<!-- Internet Technology: Project -->
+<!-- Spring 2022 -->
+
+<html>
+
+	<script>
+		function Mode() {
+  			if (document.getElementById("mainTable").style.backgroundColor == "white") {
+  				document.getElementById("mainTable").style.backgroundColor = "#EEEEEE";
+  				document.getElementById("mainMenu").style.backgroundColor = "#EEEEEE";
+  			}
+  			else  {
+  				document.getElementById("mainTable").style.backgroundColor = "white";
+  				document.getElementById("mainMenu").style.backgroundColor = "white";
+  			}
+		}
+	</script>
+
+	<head>
+	
+		<title> groUP (222) </title>
+		<Meta charset = "utf-8">
+		<Meta Name = "Author" content = "groUP (222)" >
+		<Meta Name = "Description" content = "IT Project, @2022 Spring" >
+		<Meta Name = "Keywords" content = "TU Problems, Taif Uni, IT Project" >
+		
+	</head>
+
+	<body>
+	
+		<table  width = "100%" cellspacing = "0" cellpadding = "0" style = "min-width: 1100px; border: 2px solid #86D2D9; font-family: Skia, Gurmukhi MT;">
+			<tr style = "font-size: 36px;" valign = "middle" width = "*">
+				<td style = "background-color: #86D2D9;" width = "70px"> <img src = "group-icon.png" width = "70px" valign = "middle"></td>
+				<td style = "background-color: #86D2D9;" width = "210px"> groUP (222) </td>
+				<td id = "mainMenu" style = "background-color: white; color: #EBC959; padding-left: 16px;"> bonUs: tips fOR changing http TO https </td>
+				<td align = "center" style = "background-color: #86D2D9;">
+					<button type="button" onclick = "Mode()" style = "background-color: #86D2D9; border: none; cursor: pointer;"> 
+						<img src = "215693.png" width = "60px" valign = "middle"> 
+					</button>
+				</td>
+			</tr>	
+		</table>
+	
+		<table id = "mainTable" width = "100%" cellspacing = "0" cellpadding = "0" border = "0" style = "min-width: 1100px; font-family: Skia, Gurmukhi MT; font-size: 20px; line-height: 1.6;">
+			<tr>
+				<td align = "center" style = "font-size: 52px; padding-bottom: 10px; padding-top: 70px;"> bonUS </td>
+			</tr>
+			<tr>
+				<td valign = "bottom" align = "center"> <img src = "decor.png" width = "560px"> </td>
+			</tr>
+			<tr>
+				<td align = "center" style = "padding-top: 40px; padding-left: 90px; padding-right: 90px; font-size: 25px;"> The followings are some tips and steps to follow when you decide to use HTTPS instead of HHTP, hoping you will find our little bonus of a help to you.</td>
+			</tr>
+			<tr>
+				<td style = "padding-top: 40px; padding-left: 120px; padding-right: 120px;"> 
+					<ol>
+						<span style = "color: #86D2D9;">
+							<li> Decide what type of SSL certificate you need and then purchase it from your hosting company. </li>
+							<li> Install and configure your SSL certificate onto your site's hosting account. </li>
+							<li> Although nothing should go wrong, you should always be prepared. So perform a complete back-up of your website in the event that you have to revert back. </li>
+							<li> Go through your entire website and update any hard internal links from HTTP to HTTPS. Make sure that you update your sitemap as well. </li>
+							<li> Go through your templates and update references to scripts and images as well. </li>
+						</span>
+						<span style = "color: #EBC959;">
+							<li> Make sure that you update your robots.txt file so that it includes your updated sitemap. </li>
+							<li> Make sure that you update any code libraries, including JavaScript and any third-party plugins that are used throughout your site. This ensures that nothing will break and that nothing will contain insecure content. </li>
+							<li> Go through any external links to your site that you control, such as those in directory listings, and change them to HTTPS. </li>
+							<li> Update your CDN's (Content Delivery Network) SSL settings. </li>
+							<li> Update any links that you use in your marketing automation tools, including email links. </li>
+						</span>
+						<span style = "color: #E5686A;">
+							<li> Go through all of your landing pages and paid search links and update them to HTTPS. </li>
+							<li> Be sure to crawl through old URLs using a tool like Screaming Frog to find any broken redirects or any redirect chains and update them. </li>
+							<li> Make sure that you implement 301 redirects throughout your site on a page-by-page basis. This helps ensure that your new HTTPS still get the link juice passed to them when visitors are redirected to your new pages, thereby helping preserve your SEO efforts. </li>
+							<li> Don't forget to update old redirects that are still in place. </li>
+							<li> Enable HSTS, which will tell your browser to always use HTTPS. </li>
+							<li> Enable OCSP stapling, which allows a server to identify whether a security certificate was revoked instead of a browser, thereby preventing the browser from having to download or cross-reference with the authority that issued the certificate. </li>
+						</span>
+					</ol>
+				</td>
+			</tr>
+			<tr><td  align = "center"> <img src = "bonus.png" width = "40%" style = "border: 5px solid #EBC959"> &#160 &#160 &#160 &#160 <img src = "safe.png" width = "26%"></td> </tr>
+		</table>
+	
+	</body>
+	
+</html>

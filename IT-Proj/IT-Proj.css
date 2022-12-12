@@ -1,0 +1,80 @@
+input[type=text], input[type=email], select {
+	width: 80%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #86D2D9;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 80%;
+	background-color: #86D2D9;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #60CAD0;
+}
+
+textarea {
+	width: 80%;
+	height: 150px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 1px solid #86D2D9;
+	border-radius: 4px;
+	font-size: 16px;
+	resize: none;
+  }
+
+div {
+	width: 80%;
+	border-radius: 5px;
+	background-color: #EEEEEE;
+	padding: 20px;
+}
+
+table {
+	min-width: 1100px; 
+	font-family: Skia, Gurmukhi MT; 
+	line-height: 1.4;
+}
+
+.mainMenuLink {
+	text-decoration: none; 
+	color: #EBC959;
+}
+
+.mainMenu {
+	background-color: white;
+}
+
+.prob1Span {
+	font-size: 24px; 
+	color: #E5686A; 
+	line-height: 2;
+}
+
+.prob2Img {
+	border: 5px solid #EBC959;
+}
+
+.prob3Span {
+	color: #E5686A;
+}
+
+.aboutLink {
+	color: #E5686A; 
+	text-decoration: none;
+}
+
+
+
+
