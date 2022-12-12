@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+
+<!-- Internet Technology: Project -->
+<!-- Spring 2022 -->
+
+<html>
+
+	<head>
+	
+		<!-- a link tag to link a css file with the html file -->
+		<link rel = "stylesheet" type = "text/css" href = "IT-Proj.css">
+	
+		<title> groUP (222) </title>
+		<Meta charset = "utf-8">
+		<Meta Name = "Author" content = "groUP (222)" >
+		<Meta Name = "Description" content = "IT Project, @2022 Spring" >
+		<Meta Name = "Keywords" content = "TU Problems, Taif Uni, IT Project" >
+		
+	</head>
+
+	<body>
+	
+		<table width = "100%" cellspacing = "0" cellpadding = "0" style = "position: fixed; border-bottom: 2px solid #86D2D9; border-top: 2px solid #86D2D9; border-right: 2px solid #86D2D9;">
+			<tr style = "font-size: 36px;" valign = "middle" width = "*">
+				<td style = "background-color: #86D2D9;" width = "70px"> <img src = "group-icon.png" alt = "site icon" width = "70px" valign = "middle"></td>
+				<td style = "background-color: #86D2D9; font-size: 22px;" width = "210px"> TU WEbsite helpER </td>
+				<td class = "mainMenu" style = "padding-left: 16px;"> <a href = "#intro" class = "mainMenuLink"> INtroductiON </a> </td>
+				<td class = "mainMenu"> <a href = "#indetails" class = "mainMenuLink"> IN-details </a> </td>
+				<td class = "mainMenu"> <a href = "#about" class = "mainMenuLink"> abOUT us </a> </td>
+				<td class = "mainMenu"> <a href = "#more" class = "mainMenuLink"> mORe </a> </td>
+			</tr>	
+		</table>
+		
+		<table width = "100%" cellspacing = "0" cellpadding = "34" border = "0">
+			<tr> 
+				<td id = "intro" colspan = "3" style = "font-size: 52px; padding-left: 186px; padding-bottom: 0px; padding-top: 120px;"> INtroductiON </td> 
+			</tr>
+			<tr>
+				<td align = "center" valign = "middle" width = "120px"> <img src = "intro-robot.png" alt = "intro robot" width = "120px"> </td>
+				<td style = "font-size: 25px; line-height: 1.4;"> Welcome everyone to our little page. In this page we picked 3 of the problems we -as students- face when using TU website and decided to take a deeper look at these problems and tried to provide some solutions and alternatives.
+				<br> <br> We hope that our little page will be of a help to improve TU website and for our visitors to find what they are looking for. 
+				</td>
+				<td style = "padding: 0px;"> <img src = "Intro-img.png" alt = "intro img" width = "480px" align = "right"> </td>
+			</tr>
+		</table>
+		
+		<table width = "100%" cellspacing = "0" cellpadding = "34" border = "0" style = "color: white; font-size: 20px;">
+			<tr>
+				<td id = "indetails" colspan = "2" align = "center" style = "color: black; font-size: 52px; padding-top: 80px;"> IN-details </td>
+			</tr>
+			<tr>
+				<td rowspan = "3" style = "background-color: #86D2D9;" width = "50%">
+					<p> <span style = "font-size: 38px; color: white;">PROblem<span style = "font-size: 30px; color: #EBC959;">1</span> </span> 
+						<br><br> &#160 &#160 The first major problem that the users of the TU website face is its performance and speed, specially at the beginning and ending of each semester because of the high request rate resulting from the huge number of users wanting to register and modify their semester schedules -at the begging- and adding and checking the results -at the end- .
+        				<br> To discuss this problem we have to take a look at the structure and means used to implement the site. The TU website uses JSP which depends on the JavaBeans that depends on the JVM and Oracle Application Server, so from the first glance we can see the many layers the separate the user page displayed on the browser and the server; which naturally will result in a noticeable decrease in the speed.
+        				<br> &#160 &#160 As we have grasped the gist of the problem, now we should take a deeper look at it. For starter lets make sure we understand each layer of the mentioned ones and its role; so we can find better alternatives and present reliable solutions for the problem.
+
+						<br><br> <span class = "prob1Span">1) JSP</span> <br>
+        &#160 &#160 A website is a collection of static files, HTML files, graphics and images and when hosted on a server, these websites provide different dynamic functions. Websites that provide a dynamic function can act as web applications.
+        JSP is an acronym for Java Server Pages. It is a server-side technology which helps the developers or the users to generate web-based pages. When we use JSP, we can implement, the Java API’s by default into the web-programming and also with HTML AND XML tags. Being a server-side programming language, it helps in creating dynamic web pages. Not only with Java API’s, but a connection with the database is an added advantage.
+        A JSP (Java Server Page) is translated into a regular Servlet -a Servlet is a Java program module that runs on a server and can handle the client's request- first. As any servlet would do, it translates the requests, but first time only unlike servlets. The result is obtained when the translator recognizes the file name with its extension as “.jsp”. Then it is forwarded towards the servlet again or a “.jsp” output can be generated.
+        There are many advantages for using JSP but as we are concerned here with the speed, JSP is not time and memory-efficient because the compilation of JSP takes place on the server. So we can say that using the JSP affects the speed in which the website responds to the requests in.
+
+					<br><br> <span class = "prob1Span">2) JavaBeans</span> <br>
+        &#160 &#160 A JavaBean is a Java class that should follow the following conventions:
+		<br> &#160 &#160 &#160 &#160 * It should have a no-arg constructor.
+		<br> &#160 &#160 &#160 &#160 * It should be Serializable.
+		<br> &#160 &#160 &#160 &#160 * It should provide methods to set and get the values of the properties, known as getter and setter methods.
+        <br> According to Java white paper, it is a reusable software component. A bean encapsulates many objects into one object so that we can access this object from multiple places. Moreover, it provides easy maintenance.
+
+					<br><br> <span class = "prob1Span">3) JVM</span> <br>
+        &#160 &#160 So if we are using JavaBeans it means that we need the JVM. The Java Virtual Machine or JVM is an environment that provides execution of Java programs. The code written in Java is compiled into an intermediate code which is known as the bytecode. The bytecode is the one that is executed by JVM. Any code which has been compiled into the bytecode can run on any system that has JVM installed on it.
+        Usage of JVM highly affects the speed in which the application runs or the website responds, In a Java Virtual Machine, the code is first converted into bytecode and then the bytecode is converted into the machine code for the system to finally run it. Therefore, this is the reason why the Java Virtual Machine tends to work slower and hence making a Java code run slower when compared to its equivalent C or C++ code. The compilation to bytecode that helps the code to run on any platform eventually turns out to be a disadvantage when performance is concerned.
+        <br> Java bytecode is system neutral and optimization of it according to any specific hardware set is not possible. The reason behind this is that for a code to get optimize, system specific features are the necessity and since the bytecode is system neutral it is not possible to optimize it.
+        <br> Just like a real computing machine, Java Virtual Machine also manages the memory space and processes instructions. Therefore, the Java Virtual Machine is responsible for almost everything in running a Java program. A Java code is completely dependent on the Java Virtual Machine which makes it platform dependent and in itself is platform dependent.
+
+					<br><br> <span class = "prob1Span">4) Java Application Server</span> <br>
+        &#160 &#160 The application server is a critical component of a Java application architecture. Popular Java application servers are Oracle WebLogic -which the TU website uses-, IBM WebSphere, JBoss, WildFly, Tomcat, etc. A bottleneck in the application server would directly impact the business transactions and affects application performance and end-user experience. Problems in servlet execution, bean caching, queuing, JDBC connectivity, etc. will affect performance. 
+					</p>
+				</td>
+				<td align = "center"> 
+					<img src = "prob-1_img_1.png" alt = "problem-1 img-1" width = "530px"> 
+				</td>
+			</tr>
+			<tr>
+				<td style = "color: black;" width = "50%"> 
+					<p> <span style = "font-size: 38px;">PROblem<span style = "font-size: 30px; color: #EBC959;">1 solutiON</span> </span>
+					   <br><br> &#160 &#160 We can conclude that the best solutions for the speed and performance problem are the direct ones, by reducing the number of layers separating the codes pieces and CPU of the server from each other. From many alternatives like using ASP.net and PHP.
+
+        				<br><br> <span class = "prob1Span">a) PHP</span> <br>
+        &#160 &#160 PHP stands for Hypertext Preprocessor (originally Personal Home Page) and is an open-source, server-side, general-purpose scripting language that can be embedded in HTML. PHP is an interpreted language and the interpretation is done only once. It also means that PHP works only on the services that have PHP installed. Luckily, many systems do support the scripting language and it is used by Facebook, Wikipedia, Tumblr, etc.
+        <br><br> &#160 &#160 Java and PHP have some similarities. For example, they are both open-source so they are available to the public. The languages are object-oriented and have a similar syntax. At the same time, they are different and are tailored for different purposes. 
+        First of all, PHP can be easily used across all operating systems, including Linux, macOS, MS windows, etc. On the contrary, Java operates only with systems that have JVM installed. 
+       <br><br> &#160 &#160 Development in PHP is time-efficient and cost-effective as Java needs a compiler twice during the process. PHP makes it simpler and cheaper to edit programming codes through interpretation. Java needs additional time after launching to become fully functional. However, PHP speed stays stable throughout the process. As PHP doesn’t require any special environment like JVM, that’s where it gains a competitive edge over Java. Its Write Once, Run Anywhere (WORA) approach makes it an efficient and preferred choice for cross-platform processing. Several huge websites use PHP for back-end development, i.e. Facebook, Yahoo, Wikipedia, Tumblr, and WordPress are to name a few.
+
+       					<br><br> <span class = "prob1Span">b) ASP.NET</span> <br>
+       &#160 &#160 .NET is a developer platform made up of tools, programming languages, and libraries for building many different types of applications. ASP.NET extends the .NET developer platform with tools and libraries specifically for building web apps.
+       ASP.Net is faster than Java and can be used with C# language.
+					</p>
+					<br><br>
+					<center>
+						<img src = "prob-1_img_2.png" alt = "problem-1 img-2" width = "530px">
+						<br><br><br>
+						<img src = "prob-1_img_4.jpg" alt = "problem-1 img-4" width = "530px">
+						<br><br><br>
+						<img src = "prob-1_img_3.jpg" alt = "problem-1 img-3" width = "530px">
+					</center>
+				</td>
+			</tr>
+		</table>
+		
+		<table width = "100%" cellspacing = "0" cellpadding = "34" border = "0" style = "color: white; font-size: 20px;">
+			<tr>
+				<td style = "background-color: #EEEEEE;" width = "50%">
+					<center>
+						<img src = "httpse_infographic.png" alt = "problem-2 img-1" width = "520px" class = "prob2Img">
+						<br><br><br><br><br><br>
+						<img src = "http_to_https-1.jpg" alt = "problem-2 img-2" width = "520px" class = "prob2Img">
+						<br><br><br><br><br><br>
+						<img src = "HTTPS-Can-Secure-Your-Site.jpg" alt = "problem-2 img-3" width = "520px" class = "prob2Img">
+						<br><br><br>
+						<p> <a href = "Bonus_2.html" style = "color: #86D2D9;" target = "_blank"> click here to get a bonus piece of information </a> </p>
+					</center>
+				</td>
+				<td style = "background-color: #EBC959; color: white;"> 
+					<p> <span style = "font-size: 38px;">PROblem<span style = "font-size: 30px; color: #86D2D9;">2</span> </span>
+						<br><br> &#160 &#160 The next stop we will take is at a security problem which is the use of HTTP protocol instead of the more secure HTTPS. This issue was fixed recently but it is worthy to list and discuss for its importance.
+
+         <br><br> &#160 &#160 <span style = "color: #E5686A;">HTTP</span> stands for Hypertext Transfer Protocol. It’s most commonly used to transfer data from a web server to a browser in order to allow users to view web pages. It’s the protocol that was used for basically all early websites. The problem with the regular HTTP protocol is that the information that flows from server to browser is not encrypted, which means it can be easily stolen. 
+        <br> &#160 &#160 <span style = "color: #E5686A;">HTTPS</span> stands for Hypertext Transfer Protocol Secure. HTTPS protocols remedy the regular HTTP main problem by using an SSL (secure sockets layer) certificate, which helps create a secure encrypted connection between the server and the browser, thereby protecting potentially sensitive information from being stolen as it is transferred between the server and the browser.
+
+        <br><br> &#160 &#160 The most important difference between the two protocols is the SSL certificate. Users can identify whether a site uses HTTPS protocol by the web address. The very first part of the web address (before the “www”) indicates whether the site uses HTTP or HTTPS protocols.
+        
+        				<br><br><br> <span style = "font-size: 38px;">PROblem<span style = "font-size: 30px; color: #86D2D9;">2 solutiON</span> </span>
+		<br><br> &#160 &#160 Changing HTTP to HTTPS is the reasonable solution for secure the flow of the sensitive information of users. In fact, HTTPS is basically an HTTP protocol with additional security. However, this additional security can be extremely important, especially for websites that take sensitive data from its users, such as credit card information and passwords. How do HTTPS works? The SSL certificate encrypts the information that users supply to the site, which basically translates the data into a code. Even if someone manages to steal the data being communicated between the sender and the recipient, they would not be able to understand it due to this encryption. But in addition to adding that extra layer of security, HTTPS is also secured via TLS (Transport Layer Security) protocol. TLS helps provide data integrity, which helps prevent the transfer of data from being modified or corrupted, and authentication, which proves to your users that they are communicating with the intended website.
+					</p>
+				</td>
+			</tr>
+		</table>
+		
+		<table width = "100%" cellspacing = "0" cellpadding = "34" border = "0" style = "color: white; font-size: 16px;">
+			<tr>
+				<td colspan = "2" align = "center" colspan = "2"> <img src = "rd2.png" alt = "problem-3 img-1" width = "500"> </td>
+			</tr>
+			<tr style = "background-color: #86D2D9;">
+				<td style = "border-right: dotted #EBC959 10px;" width = "50%"> 
+					<p> <span style = "font-size: 38px;"> PROblem<span style = "font-size: 30px; color: #EBC959;">3</span> </span>
+						<br><br> &#160 &#160The third and last problem we will be discussing is the use of pop-ups. First things first, we need to know what pop-ups exactly are so we can understand the issue and provide a reliable solution or alternative. 
+        In essence, pop-ups do exactly as their name suggests – they ‘pop up’ on screen. This usually happens once the content of a webpage has loaded, and seconds later the pop-up will appear to deliver a message whilst obscuring the view of the freshly loaded page. That’s the general idea, but they can also be created to coincide with various website visitor actions, such as hovering their mouse close to the browser close button.
+        <br> &#160 &#160 There are also interstitials, and even Google uses the term ‘pop-up’ to describe both forms of messaging. Whereas a pop-up will usually arrive once the content of a webpage has loaded, an interstitial appears whilst the page is loading, and can even prevent access to the content until the user clicks the ad or a ‘continue to site’ link.
+        Putting technicalities aside, both pop-ups and interstitials achieve the same thing – putting information in front of website visitors in a clear and (almost) unavoidable way.
+
+        <br><br> &#160 &#160 When used properly, pop-ups can be good tools. Naturally how these benefits apply depends on the site involved, but well-designed and properly executed pop-ups are no bad thing. They get the point across, capture data more easily, and can look slick.
+        The use of pop-ups is only advantageous if they’re designed and used properly as mentioned earlier. Just as with any poorly implemented tool, pop-ups could damage the site’s reputation and disturb their visitors.
+
+        <br><br> &#160 &#160 &#160 &#160 <span class = "prob3Span">1) Pop-ups don’t have a great reputation,</span> pop-ups are synonymous with spam. Although it isn’t such an issue these days, it wasn’t all that long ago that internet users regularly picked up viruses from online pop-ups and so it’s to be expected that many members of the public treat them with a healthy dose of scepticism.
+        <br> &#160 &#160&#160 &#160 <span class = "prob3Span">2) Many of the visitors use an ad blocker,</span> Acting on their dislike for pop-up ads and other forms of ‘annoying’ marketing, many users are now guarded against such techniques by an ad blocker. Now, whilst not all pop-ups will be affected by these browser plugins, it’s worth questioning whether it’s even worth it to create pop-ups that may simply be blocked from view by a simple bit of code.
+       <br> &#160 &#160 &#160 &#160 <span class = "prob3Span">3)They block content,</span> And because they tend to load last, users have already started reading by the time pop-ups block their view.
+       <br> &#160 &#160 &#160 &#160 <span class = "prob3Span">4) Bounce rate,</span> Quite often the action users take is to leave your site.
+       <br> &#160 &#160 &#160 &#160 <span class = "prob3Span">5) Pop-ups are awful on mobile.</span>
+					</p>
+				</td>
+				<td valign = "top">
+					<p> <span style = "font-size: 38px;"> PROblem<span style = "font-size: 30px; color: #EBC959;">3 solutiON</span> </span>
+						<br><br> Use of alternatives is a good way to go. The use of dialogues and frames instead of pop-ups makes a good choice.
+        Frames for example are used to divide the browser window into multiple sections where each section can load a separate HTML document. A collection of frames in the browser window is known as a frameset. The window is divided into frames in a similar way the tables are organized: into rows and columns.
+					</p>
+					<br><br><br><br><br>
+					<center>
+					<img src = "pop-ups.jpg" alt = "problem-3 img-2" width = "520px" style = "border: 5px solid #E5686A;">
+					<br><br><br><br>
+					<p align = "center"> <a href = "Bonus_3.html" style = "color: #E5686A;" target = "_blank"> click here to collect another piece of bonus informations </a> </p>
+					</center>
+				</td>
+			</tr>
+		</table>
+		
+		<table width = "100%" cellspacing = "0" cellpadding = "34" border = "0" style = "color: white; font-size: 20px;">
+			<tr>
+				<td id = "about" width = "50%" align = "center" valign = "top" style = "background-color: #EEEEEE; color: black; font-size: 52px; padding-top: 60px;"> abOUT us </td>
+				<td id = "more" align = "center" style = "background-color: #E5686A; color: white; font-size: 52px; padding-top: 60px;"> mORe 
+					<br>
+					<span style = "font-size: 20px;"> We will be glad to receive your opinions and suggestions </span>
+				</td>
+			</tr>
+			<tr>
+				<td width = "50%" align = "center" style = "background-color: #EEEEEE; color: black;">
+					Hello our dear visitors, we are a group of Taif University's students who are going to graduate next year insha allah. We worked together in our group to develop this little page as a project for Internet Technology subject, hoping for it to be a helpful step in the way of improving our TU website to give a better experience for future users and visitors. We like to thank our teacher for giving us the opportunity to work on this little project of ours and the chance of improving ourselves.
+					
+					<br><br>
+      
+        			<br><br> <a href = "mailto:nooramran439@gmail.com" class = "aboutLink"> Noor </a>Emran Al-Qasimi (43901019)
+        			<br><br> <a href = "mailto:s43901069@students.tu.edu.sa" class = "aboutLink"> Noora </a>Mzeed Al-Bogami (43901069)
+        			<br><br> <a href = "mailto:s43903683@students.tu.edu.sa" class = "aboutLink"> Majd </a>Hussain. Al-Aiali (43903683)
+        			<br><br>  <a href = "mailto:M18ayar@gmail.com" class = "aboutLink"> Mayar </a>Majed Al-Ghamdi (43902672)
+        			<br><br> <a href = "mailto:Soso.040287@gmail.cm" class = "aboutLink"> Shatha </a>Salman (43901781)
+        			
+        			<br><br><br><br><br><br><br><br>
+				</td>
+				<td valign = "top" style = "background-color: #E5686A; color: black;">  
+					<center>
+						<div>	
+							<form method = "post" action = "database.php">
+								<label> <span align = "left">yOUR name:</span> <input type = "text" name = "visitor_name" size = "25" maxlength = "30" required> </label>
+								<br>
+								<label> yOUR email: <input type = "email" name = "visitor_email" placeholder = "name@domain.com" size = "25" required> </label>
+								<br>
+								<label> OUR visitOR IS: 
+									<select name = "visitor_type" width = "25"> 
+										<option selected> Student </option>
+										<option> Teacher </option>
+										<option> Employee </option>
+										<option> Other </option>
+									</select>
+								</label>
+								<br><br>
+								<textarea name = "visitor_mail" required> ThIS Is yOUR own space TO write IN </textarea>
+								<br><br>
+								<input type = "submit" value = "send">
+							</form> 
+						</div>	
+						<br><br>
+						<div>
+							<form method = "post" action = "display.php"> 
+								<label> <span align = "left">choose what TO display:</span>
+									<select name = "field">
+										<option> Mail </option>
+										<option> Email </option>
+										<option> Name </option>
+									</select>
+								</label>
+								<input type = "submit" value = "display previous comments and suggestions"> 
+							</form>
+						</div>						
+					</center>
+				</td>
+			</tr>
+			<tr>
+				<td style = "background-color: #EEEEEE;"> <img src = "about_us-robot.png" alt = "about-us robot" width = "160px" align = "right"> </td>
+				<td style = "background-color: #E5686A;"> <img src = "more-robot.png" alt = "more robot" width = "152px" align = "left"> </td>
+			</tr>
+		</table>
+		
+		<table width = "100%" cellspacing = "0" cellpadding = "0" style = "font-size: 36px; color: white;">
+			<tr valign = "middle" height = "66px">
+				<td align = "center" width = "20%" style = "background-color: #E5686A;"> 
+					<a href = "Ref.html" style = "text-decoration: none; color: white;" target = "_blank"> <span style = "color: #86D2D9">REFER</span>ences </a>
+				</td> </td>
+				<td align = "center" width = "20%" style = "background-color: #EBC959;">  copy RIGHTs </td>
+				<td align = "center" style = "background-color: #86D2D9;"> TU WEbsite helpER </td>
+				<td align = "center" style = "background-color: #EEEEEE; color: #E5686A;"> sprINg 2022 </td>
+			</tr>
+		</table>
+		
+	</body>
+	
+</html>
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
